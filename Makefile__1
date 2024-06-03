@@ -1,0 +1,33 @@
+NAME = testy
+SRCS = main.cc
+OBJS = $(SRCS:.cc=.o)
+CPP = c++
+RM = rm -Wall
+CPPFLAGS = -Wall \
+    -I/opt/homebrew/Cellar/sfml/2.6.1/include \
+    -std=c++17
+LDFLAGS = \
+    -L/opt/homebrew/Cellar/sfml/2.6.1/lib \
+    -lsfml-window \
+    -lsfml-system \
+    -lsfml-graphics \
+    -lsfml-network \
+    -lsfml-audio
+
+%.o: %.cc
+	$(CPP) $(CPPFLAGS) -c $< -o $@
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CPP) $(CPPFLAGS) $(OBJS) $(LDFLAGS) -o $@
+
+clean:
+	$(RM) $(OBJS)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
