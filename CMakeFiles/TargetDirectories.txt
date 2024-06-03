@@ -1,3 +1,0 @@
-/Users/siyoungkim/games/CMakeFiles/Testy.dir
-/Users/siyoungkim/games/CMakeFiles/edit_cache.dir
-/Users/siyoungkim/games/CMakeFiles/rebuild_cache.dir
