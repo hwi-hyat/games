@@ -1,8 +1,6 @@
 #pragma once
 
-
-
-class snake
+class game
 {
     private:
         //window
@@ -11,9 +9,9 @@ class snake
         unsigned int board_size_y;
 
     public:
-        snake();
-        snake(unsigned int board_size_x, unsigned int board_size_y);
-        ~snake();
+        game();
+        game(unsigned int board_size_x, unsigned int board_size_y);
+        ~game();
 
         //setter
         void set_board_size_x(unsigned int board_size_x);
